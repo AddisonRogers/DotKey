@@ -3,7 +3,6 @@
 
 | Category             | Word                         |
 | -------------------- | ---------------------------- |
-| text                 | text                         |
 | Elementary data type | Integer, real, boolean, char |
 | Composite data type  | string, array                |
 | Abstract data type   | list, stack, queue           |
