@@ -1,12 +1,15 @@
-<script async type="application/javascript" src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js">
-    var config = {
-      startOnLoad:true,
-      theme:'{{ if .Get "theme" }}{{ .Get "theme" }}{{ else }}dark{{ end }}',
-      align:'{{ if .Get "align" }}{{ .Get "align" }}{{ else }}center{{ end }}'
-    };
-    mermaid.initialize(config);
-  </script>
-  
-  <div class="mermaid">
-    {{.Inner}}
-  </div>
+<div class="mermaid">
+    {{ .Inner | safeHTML }}
+</div>
+
+{{ if le (.Page.Scratch.Get "mermaidInserted") 0 }}
+
+{{ .Page.Scratch.Add "mermaidInserted" 1 }}
+
+{{ $mermaid := resources.Get "js/mermaid.js" | minify | fingerprint }}
+<script type="application/javascript" src="{{ $mermaid.Permalink }}" defer></script>
+<script type="module">
+    mermaid.initialize({});
+</script>
+
+{{ end }}

@@ -75,7 +75,7 @@ A graph is a diagram consisting of circles, called vertices, joined by lines cal
 ### Trees
 
 A tree is a common abstract data type (ADT).
-<mermaid>
+{{< mermaid >}}
 graph TB
 A((A))
 B((B))
@@ -103,7 +103,7 @@ G --- J
 
 D --- H
 H --- K
-</mermaid>
+{{< /mermaid >}}
 A tree is a connected, undirected graph with no cycles.
 A rooted tree is a tree but one that has an identified root, so every node has a unique parent apart from the root.
 A binary tree is a rooted tree in which each node has a maximum of two children.
@@ -111,7 +111,7 @@ A balanced binary tree is a tree where the nodes are distributed in such a way t
 
 A binary tree can be traversed in three different ways:
 
-<mermaid>
+{{<mermaid>}}
 graph TB  
 
 subgraph PostOrder
@@ -138,7 +138,7 @@ Pre1 --> Pre3((3))
 
 end  
 
-</mermaid>
+{{</mermaid>}}
 
 ### Graph Traversal Algorithms
 
