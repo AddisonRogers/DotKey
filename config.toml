@@ -1,0 +1,118 @@
+baseURL = 'http://dotkey.dev/'
+languageCode = 'en-uk'
+title = 'DotKey'
+theme = 'PaperMod'
+
+paginate = 5
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+googleAnalytics = "UA-123-45"
+pygmentsUseClasses = true
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+env = "production"
+title = "DotKey"
+description = "DotKey, a site from DotRacc."
+keywords = [ "Blog", "Portfolio", "Technology"]
+author = "DotRacc"
+#images = [ "<link or path of image for opengraph, twitter-cards>" ]
+DateFormat = "January 2, 2006"
+defaultTheme = "auto"
+disableThemeToggle = true
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = false
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
+
+  [params.assets]
+  favicon = "/favicon.ico"
+  favicon16x16 = "/favicon-16x16.png"
+  favicon32x32 = "/favicon-32x32.png"
+  apple_touch_icon = "/apple-touch-icon.png"
+  #safari_pinned_tab = "<link / abs url>"
+
+  [params.label]
+  text = "Home"
+  icon = "/apple-touch-icon.png"
+  iconHeight = 35
+
+  [params.profileMode]
+  enabled = false
+  title = "DotKey"
+  subtitle = "A site from DotRacc"
+  #imageUrl = "<img location>"
+  #imageWidth = 120
+  #imageHeight = 120
+  #imageTitle = "DK Image"
+
+
+  [params.homeInfoParams]
+  Title = "Welcome to DotKey"
+  Content = "A site from DotRacc"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/AddisonRogers/"
+
+
+[[params.socialIcons]]
+  name = "discord"
+  url = "https://discordapp.com/users/274224695065313281/"
+
+[params.analytics.google]
+SiteVerificationTag = "XYZabc"
+
+[params.analytics.bing]
+SiteVerificationTag = "XYZabc" 
+
+[params.analytics.yandex]
+SiteVerificationTag = "XYZabc"
+
+  [params.cover]
+  hidden = true
+  hiddenInList = true
+  hiddenInSingle = true
+
+  [params.editPost]
+  URL = "https://github.com/AddisonRogers/DotKey/content"
+  Text = "Suggest Changes"
+  appendFilePath = true
+
+  [params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1_000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = [ "title", "permalink", "summary", "content" ]
+
+
+[[menu.main]]
+identifier = "Search"
+name = "Search"
+url = "/search"
+weight = 20
+
+[markup.highlight]
+noClasses = false
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
