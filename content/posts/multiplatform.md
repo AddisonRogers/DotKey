@@ -4,8 +4,6 @@ date: 2023-01-14T19:18:12Z
 draft: false
 ---
 
-# Multiplatform Frameworks
-
 ## What is Multiplatform
 A question that I got quite confused about when started. It is the ability to run the same code base across mutliple platforms. The common pairings are:
 - IOS and Android
@@ -57,6 +55,7 @@ Really though all the different framework's have an ability to switch UI themes 
 TLDR assuming you have the ability to pick up dart you should use Flutter. In nearly every situation it performs and is generally better than the competition. Flutter also gets around the idea that you can't get native looking apps with multiplatform with the cupertino widget set (apple version of the ui tools). <br/>
 But that's the easy answer.
 ```mermaid
+graph TD
 Start(You want a multiplatform app) --Yes--> WebsiteQ(Do you have a website and want to use it)
 
 PerfQ(Do you care about performance) --No--> BridgeQ(Do you want to use the device's capabilites)
