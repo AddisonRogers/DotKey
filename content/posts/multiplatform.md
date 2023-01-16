@@ -55,28 +55,45 @@ Really though all the different framework's have an ability to switch UI themes 
 TLDR assuming you have the ability to pick up dart you should use Flutter. In nearly every situation it performs and is generally better than the competition. Flutter also gets around the idea that you can't get native looking apps with multiplatform with the cupertino widget set (apple version of the ui tools). <br/>
 But that's the easy answer.
 ```mermaid
-graph TD
-Start(You want a multiplatform app) --Yes--> WebsiteQ(Do you have a website and want to use it)
+flowchart TD
+    Start{You want a multiplatform app}
+    PerfQ{Do you like JS}
+    BridgeQ{Do you want to use the device's capabilites}
 
-PerfQ(Do you care about performance) --No--> BridgeQ(Do you want to use the device's capabilites)
+    ReactQ{Do you want to make it with React}
+    ImmatureQ{Do you prefer more mature frameworks}
+    ImmatureFW{Are you okay with Immature frameworks}
+    WebsiteWant{Do you want a website}
+    AndroidQ{Do you have an android app}
+    CORKOTQ{C# or Kotlin}
+    
 
-BridgeQ --No--> PWA
-BrideQ --Yes--> React(Do you want to make it with React)
-React --Yes--> React Native
-React --No--> Immature(Do you prefer more mature frameworks)
-Immature --Yes--> Ionic
-Immature --No--> Native Script
 
-WebsiteQ --No--> ImmatureFW(Are you okay with Immature frameworks)
-PerfQ --> ImmatureFW
-ImmatureFW --No--> Flutter
-ImmatureFW --Yes--> WebsiteWant(Do you want a website)
-WebsiteWant --Yes--> Flutter
-WebsiteWant --No--> Android(Do you have an android app)
-Android --Yes--> KMM
-Android --No--> CORKOT(C# or Kotlin)
-CORKOT --C#--> MAUI
-CORKOT --Kotlin--> KMM
+    Start --> PerfQ
+    
+    PerfQ --Yes--> BridgeQ
+    PerfQ --No--> ImmatureFW
+
+    BridgeQ-- No -->PWA
+    BridgeQ-- Yes -->ReactQ
+
+    ReactQ-- Yes -->ReactNative(React Native)
+    ReactQ-- No -->ImmatureQ
+
+    ImmatureQ-- Yes -->Ionic
+    ImmatureQ-- No -->NativeScript(Native Script)
+
+    ImmatureFW --No--> Flutter
+    ImmatureFW --Yes--> WebsiteWant
+
+    WebsiteWant --Yes--> Flutter
+    WebsiteWant --No--> AndroidQ
+
+    AndroidQ --Yes--> KMM
+    AndroidQ --No--> CORKOTQ
+    
+    CORKOTQ --C#--> MAUI
+    CORKOTQ --Kotlin--> KMM
 ```
 There's a bit more than this ie if you hate OOP but all the frameworks have different advantages especially if you know one language more than another or if you have an existing codebase.
 
